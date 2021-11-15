@@ -8,7 +8,7 @@ export const MainContainer = styled.main`
   align-items: center;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.p`
   font-weight: var(--semibold-font-weight);
   font-size: var(--sm-font-size);
   line-height: var(--sm-line-height);

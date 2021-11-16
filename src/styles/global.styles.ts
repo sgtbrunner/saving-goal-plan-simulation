@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     :root {
         // COLORS
         --primary-color: #1B31A8;
+        --secondary-color: #0079FF;
+        --blue-gray-10-color: #F4F8FA;
         --blue-gray-50-color: #E9EEF2;
         --blue-gray-100-color: #CBD5DC;
         --blue-gray-300-color: #8A9CA9;
@@ -13,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
         --blue-gray-600-color: #4D6475;
         --blue-gray-900-color: #1E2A32;
         --white-color: #FFFFFF;
-        --grey-background-color: #F4F8FA;
 
         // FONT
         --default-font-family: 'Work Sans';
@@ -25,16 +26,19 @@ const GlobalStyle = createGlobalStyle`
         --sm-font-size: 18px;
         --md-font-size: 20px;
         --lg-font-size: 24px;
+        --xlg-font-size: 32px;
         --light-font-weight: 400;
         --normal-font-weight: 500;
         --semibold-font-weight: 600;
 
         //LINE HEIGHT
+        --xxxs-line-height: 16px;
         --xxs-line-height: 18px;
         --xs-line-height: 20px;
         --sm-line-height: 22px;
         --md-line-height: 24px;
         --lg-line-height: 28px;
+        --xl-line-height: 38px;
     }
 
     body {
@@ -46,8 +50,12 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    strong {
+        font-weight: var(--semibold-font-weight);
+    }
+
     main {
-        background-color: var(--grey-background-color);
+        background-color: var(--blue-gray-10-color);
     }
 
     code, html {
@@ -73,6 +81,7 @@ export const InputLabel = styled.label`
 
 export const InputContainer = styled.div`
   display: flex;
+  border-radius: 4px;
   font-size: var(--md-font-size);
   border: 1px solid var(--blue-gray-50-color);
 

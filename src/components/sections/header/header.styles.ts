@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SMALL_DEVICE_BREAKPOINT } from '../../../styles/styles.constants';
+import { SMALL_DEVICE_BREAKPOINT } from '../../../styles/global.styles';
 
 export const LogoContainer = styled.header`
   background-color: var(--white-color);

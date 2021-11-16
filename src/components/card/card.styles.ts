@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { SMALL_DEVICE_BREAKPOINT } from '../../styles/styles.constants';
+import { SMALL_DEVICE_BREAKPOINT } from '../../styles/global.styles';
 
-export const ActionCardContainer = styled.div`
+export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 31px 24px 24px 24px;
@@ -10,6 +10,7 @@ export const ActionCardContainer = styled.div`
   border-radius: 8px;
   margin-bottom: 63px;
   width: 100%;
+  box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);
 
   @media (min-width: ${SMALL_DEVICE_BREAKPOINT}px) {
     padding: 35px 40px 40px 40px;
@@ -57,6 +58,25 @@ export const CardTitle = styled.div`
     p {
       font-size: var(--xs-font-size);
       line-height: var(--md-line-height);
+    }
+  }
+`;
+
+export const CardForm = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    padding-top: 16px;
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: ${SMALL_DEVICE_BREAKPOINT}px) {
+    flex-direction: row;
+    gap: 16px;
+
+    label {
+      padding-top: 24px;
     }
   }
 `;

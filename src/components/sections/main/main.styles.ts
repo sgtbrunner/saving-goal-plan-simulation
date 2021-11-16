@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SMALL_DEVICE_BREAKPOINT } from '../../../styles/styles.constants';
+import { SMALL_DEVICE_BREAKPOINT } from '../../../styles/global.styles';
 
 export const MainContainer = styled.main`
   display: flex;
@@ -9,7 +9,7 @@ export const MainContainer = styled.main`
 `;
 
 export const Title = styled.p`
-  font-weight: var(--semibold-font-weight);
+  font-weight: var(--light-font-weight);
   font-size: var(--sm-font-size);
   line-height: var(--sm-line-height);
   color: var(--primary-color);

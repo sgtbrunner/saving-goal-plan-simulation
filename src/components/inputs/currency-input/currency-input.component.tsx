@@ -1,13 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 
 import { convertInputToNumber } from '../../../utils/function.utils';
 import { CurrencyInputProps } from './currency-input.types';
-import {
-  CurrencyInputContainer,
-  InputLabel,
-  IconContainer,
-  Input,
-} from './currency-input.styles';
+import { InputLabel, InputContainer } from '../../../styles/global.styles';
+import { IconContainer, Input } from './currency-input.styles';
 
 const CurrencyInput = ({
   label,
@@ -25,9 +21,9 @@ const CurrencyInput = ({
   };
 
   return (
-    <Fragment>
+    <div>
       <InputLabel htmlFor={name}>{label}</InputLabel>
-      <CurrencyInputContainer>
+      <InputContainer>
         <IconContainer>
           <span>{symbol}</span>
         </IconContainer>
@@ -41,8 +37,8 @@ const CurrencyInput = ({
           disableAbbreviations
           defaultValue={amount}
         />
-      </CurrencyInputContainer>
-    </Fragment>
+      </InputContainer>
+    </div>
   );
 };
 

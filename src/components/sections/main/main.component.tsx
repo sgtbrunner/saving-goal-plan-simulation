@@ -9,7 +9,7 @@ const Main: React.FC = () => (
     <Title>
       Let&apos;s plan your <strong>saving goal</strong>.
     </Title>
-    <Card title="Buy a house" subtitle="Saving a goal" icon={buyAHouse} />
+    <Card title="Buy a house" subtitle="Saving goal" icon={buyAHouse} />
   </MainContainer>
 );
 

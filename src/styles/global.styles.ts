@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-export const SMALL_DEVICE_BREAKPOINT = 600;
+export const SMALL_DEVICE_BREAKPOINT = 768;
 
 const GlobalStyle = createGlobalStyle`
     :root {

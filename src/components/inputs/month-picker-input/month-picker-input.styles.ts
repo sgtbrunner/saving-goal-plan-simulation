@@ -9,6 +9,7 @@ export const MonthPickerInputContainer = styled(InputContainer)`
   justify-content: space-between;
   align-items: center;
   min-height: 66px;
+  min-width: 188px;
 `;
 
 export const DateContainer = styled.div`

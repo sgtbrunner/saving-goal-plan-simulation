@@ -1,4 +1,9 @@
+export const LEFT = 'left';
+export const RIGHT = 'right';
+
 export type ArrowButtonProps = {
-  direction: 'right' | 'left';
+  id: string;
+  direction: typeof LEFT | typeof RIGHT;
   disabled?: boolean;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 };

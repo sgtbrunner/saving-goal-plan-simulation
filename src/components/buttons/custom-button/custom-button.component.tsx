@@ -1,5 +1,6 @@
+import { WHITE } from '../../../utils/constants.utils';
 import { Button } from './custom-button.styles';
-import { ButtonProps, WHITE } from './custom-button.types';
+import { ButtonProps } from './custom-button.types';
 
 const CustomButton = ({
   color = 'primary',

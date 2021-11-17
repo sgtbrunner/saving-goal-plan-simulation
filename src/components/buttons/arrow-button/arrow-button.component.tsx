@@ -1,4 +1,5 @@
-import { ArrowButtonProps, RIGHT } from './arrow-button.types';
+import { RIGHT } from '../../../utils/constants.utils';
+import { ArrowButtonProps } from './arrow-button.types';
 import ArrowLeft from '../../../assets/icons/arrow-left.svg';
 import ArrowRight from '../../../assets/icons/arrow-right.svg';
 import { Button } from './arrow-button.styles';

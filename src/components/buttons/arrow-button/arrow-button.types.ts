@@ -1,9 +1,8 @@
-export const LEFT = 'left';
-export const RIGHT = 'right';
+import { LEFT, RIGHT } from '../../../utils/constants.utils';
 
 export type ArrowButtonProps = {
   id: string;
-  direction: typeof LEFT | typeof RIGHT;
+  direction?: typeof LEFT | typeof RIGHT;
   disabled?: boolean;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };

@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { updateReachDate } from '../../../redux/saving-goal/saving-goal.actions';
 import { Dispatch } from '../../../redux/saving-goal/saving-goal.types';
 import { FIRST_STEP } from '../../../utils/constants.utils';
+import { LEFT, RIGHT } from '../../../utils/constants.utils';
 import { getMonthPickerState } from '../../../utils/functions.utils';
 import { MonthPickerInputState } from '../../../utils/types.utils';
 import ArrowButton from '../../buttons/arrow-button/arrow-button.component';
-import { LEFT, RIGHT } from '../../buttons/arrow-button/arrow-button.types';
 import { MonthPickerInputProps } from './month-picker-input.types';
 import {
   MonthPickerInputContainer,

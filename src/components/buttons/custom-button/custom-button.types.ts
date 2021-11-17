@@ -1,4 +1,4 @@
-export const WHITE = 'white';
+import { BUTTON, WHITE } from '../../../utils/constants.utils';
 
 export type CustomButtonStyles = {
   color: string;
@@ -6,7 +6,7 @@ export type CustomButtonStyles = {
 };
 
 type ButtonColor = 'primary' | 'secondary' | typeof WHITE;
-type ButtonType = 'button' | 'submit' | 'reset';
+type ButtonType = typeof BUTTON | 'submit' | 'reset';
 
 export type ButtonProps = {
   children: string;

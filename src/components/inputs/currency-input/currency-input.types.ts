@@ -3,4 +3,7 @@ export type CurrencyInputProps = {
   name?: string;
   symbol?: string;
   initialValue?: string | number;
+  updateAmount: DispatchUpdateAmountAction;
 };
+
+export type DispatchUpdateAmountAction = (amount: number) => void;

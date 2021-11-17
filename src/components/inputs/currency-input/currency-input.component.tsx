@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
+import { updateAmount } from '../../../redux/saving-goal/saving-goal.actions';
+import { Dispatch } from '../../../redux/saving-goal/saving-goal.types';
+import { INITIAL_GOAL_AMOUNT } from '../../../utils/constants.utils';
+import { getSignificantAndFractionalDigits } from '../../../utils/functions.utils';
 import { CurrencyInputProps } from './currency-input.types';
 import { InputLabel, InputContainer } from '../../../styles/global.styles';
 import { IconContainer, Input } from './currency-input.styles';
@@ -9,24 +14,27 @@ const clearInvalidCharacters = (value: string): string =>
 
 const convertInputToNumber = (value: string): number => {
   if (value.includes('.')) {
-    const [decimalPart, fractionalPart] = value.split('.');
+    const [significantPart, fractionalPart] =
+      getSignificantAndFractionalDigits(value);
+
     return Number(
       [
-        clearInvalidCharacters(decimalPart),
+        clearInvalidCharacters(significantPart),
         '.',
         clearInvalidCharacters(fractionalPart),
       ].join('')
     );
   }
 
-  return Number(value.replace(/\D|^0+/g, ''));
+  return Number(clearInvalidCharacters(value));
 };
 
 const CurrencyInput = ({
   label,
   name = 'amount',
   symbol = '$',
-  initialValue = '25000',
+  initialValue = INITIAL_GOAL_AMOUNT,
+  updateAmount,
 }: CurrencyInputProps): JSX.Element => {
   const [amount, setAmount] = useState(initialValue);
 
@@ -34,7 +42,9 @@ const CurrencyInput = ({
     target,
   }: React.ChangeEvent<HTMLInputElement>): void => {
     const el = target as HTMLInputElement;
-    setAmount(convertInputToNumber(el.value));
+    const amount = convertInputToNumber(el.value);
+    setAmount(amount);
+    updateAmount(amount);
   };
 
   return (
@@ -59,4 +69,8 @@ const CurrencyInput = ({
   );
 };
 
-export default CurrencyInput;
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  updateAmount: (amount: number) => dispatch(updateAmount(amount)),
+});
+
+export default connect(null, mapDispatchToProps)(CurrencyInput);

@@ -1,4 +1,8 @@
-import { SummaryProps, FormatCurrencyType } from './summary.types';
+import { connect } from 'react-redux';
+
+import { getSignificantAndFractionalDigits } from '../../utils/functions.utils';
+import { SavingGoalStoreProps, StoreState } from '../../utils/types.utils';
+import { FormatCurrencyType } from './summary.types';
 import {
   SummaryContainer,
   MonthlyAmountContainer,
@@ -12,8 +16,15 @@ const USDCurrencyFormatter = (digits: number): Intl.NumberFormat =>
     maximumFractionDigits: digits,
   });
 
-const formatUSDCurrency = ({ value, digits = 2 }: FormatCurrencyType): string =>
-  USDCurrencyFormatter(digits).format(value);
+const formatUSDCurrency = ({
+  value,
+  digits = 2,
+}: FormatCurrencyType): string => {
+  const fullValue = USDCurrencyFormatter(digits).format(value);
+  const [significantPart, fractionalPart] =
+    getSignificantAndFractionalDigits(fullValue);
+  return fractionalPart === '00' ? significantPart : fullValue;
+};
 
 const Summary = ({
   goalAmount,
@@ -21,7 +32,7 @@ const Summary = ({
   reachDateYear,
   monthlyAmount,
   monthlyDeposits,
-}: SummaryProps): JSX.Element => (
+}: SavingGoalStoreProps): JSX.Element => (
   <SummaryContainer>
     <MonthlyAmountContainer>
       <h4>Monthly amount</h4>
@@ -31,8 +42,7 @@ const Summary = ({
       <p>
         You’re planning <strong>{`${monthlyDeposits} monthly deposits`}</strong>{' '}
         to reach your{' '}
-        <strong>{formatUSDCurrency({ value: goalAmount, digits: 0 })}</strong>{' '}
-        goal by{' '}
+        <strong>{formatUSDCurrency({ value: goalAmount })}</strong> goal by{' '}
         <strong>
           {reachDateMonth} {reachDateYear}
         </strong>
@@ -42,4 +52,20 @@ const Summary = ({
   </SummaryContainer>
 );
 
-export default Summary;
+const mapStateToProps = ({
+  savingGoal: {
+    goalAmount,
+    reachDateMonth,
+    reachDateYear,
+    monthlyAmount,
+    monthlyDeposits,
+  },
+}: StoreState) => ({
+  goalAmount,
+  reachDateMonth,
+  reachDateYear,
+  monthlyAmount,
+  monthlyDeposits,
+});
+
+export default connect(mapStateToProps)(Summary);

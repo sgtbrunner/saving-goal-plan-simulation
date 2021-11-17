@@ -22,13 +22,7 @@ const Card = ({ title, subtitle, icon }: CardProps): JSX.Element => (
       <CurrencyInput label="Total amount" />
       <MonthPickerInput label="Reach goal by" />
     </CardForm>
-    <Summary
-      goalAmount={25000}
-      reachDateMonth="October"
-      reachDateYear="2021"
-      monthlyAmount={520.83}
-      monthlyDeposits={48}
-    />
+    <Summary />
     <CustomButton>Confirm</CustomButton>
   </CardContainer>
 );

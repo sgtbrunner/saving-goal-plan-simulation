@@ -8,13 +8,15 @@
   ],
   "parser": "@typescript-eslint/parser",
   "rules": {
+    "import/no-named-as-default": 0,
+    "no-debugger": "warn",
+    "no-console": "warn",
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "react/prop-types": [0],
     "react/react-in-jsx-scope": [0],
     "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
-    "import/no-named-as-default": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "prettier/prettier": ["error", { "singleQuote": true }],
     "@typescript-eslint/explicit-member-accessibility": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/no-explicit-any": 1,
@@ -22,7 +24,7 @@
       "error",
       {
         "selector": "default",
-        "format": ["camelCase"],
+        "format": ["camelCase", "UPPER_CASE"],
         "leadingUnderscore": "allow",
         "trailingUnderscore": "allow"
       },

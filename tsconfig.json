@@ -22,6 +22,6 @@
   },
   "include": [
     "src/components",
-    "src/types/custom.d.ts"
+    "src/typescript/custom.d.ts"
   ]
 }

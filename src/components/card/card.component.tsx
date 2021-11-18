@@ -15,11 +15,7 @@ const Card = ({ title, subtitle, icon }: CardProps): JSX.Element => (
         <p>{subtitle}</p>
       </div>
     </CardTitle>
-    <CardForm
-      onSubmit={(event) => {
-        event.preventDefault();
-      }}
-    >
+    <CardForm>
       <CurrencyInput label="Total amount" />
       <MonthPickerInput label="Reach goal by" />
     </CardForm>

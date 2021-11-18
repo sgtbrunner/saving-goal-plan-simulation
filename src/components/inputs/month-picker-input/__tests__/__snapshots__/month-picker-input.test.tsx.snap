@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthPickerInput component should match snapshot 1`] = `
+<div>
+  <div>
+    <label
+      class="sc-gtsrHT dDJGpo"
+      for="reachDate"
+    >
+      Date
+    </label>
+    <div
+      class="sc-dlnjwi sc-hKFxyN ieTIfq kqBlkA"
+    >
+      <button
+        class="sc-bdnxRM leqYLS"
+        disabled=""
+        id="previous-month"
+        type="button"
+      >
+        <img
+          alt="arrow-left"
+          src="arrow-left.svg"
+        />
+      </button>
+      <div
+        class="sc-eCApnc gDrXuf"
+      >
+        <p
+          class="sc-jSFjdj fCWTUk"
+        >
+          December
+        </p>
+        <p
+          class="sc-gKAaRy bsozYs"
+        >
+          2021
+        </p>
+      </div>
+      <button
+        class="sc-bdnxRM leqYLS"
+        id="next-month"
+        type="button"
+      >
+        <img
+          alt="arrow-right"
+          src="arrow-right.svg"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -3,8 +3,15 @@ import { connect } from 'react-redux';
 
 import { updateReachDate } from '../../../redux/saving-goal/saving-goal.actions';
 import { Dispatch } from '../../../redux/saving-goal/saving-goal.types';
-import { FIRST_STEP } from '../../../utils/constants.utils';
-import { LEFT, RIGHT } from '../../../utils/constants.utils';
+import {
+  FIRST_STEP,
+  LEFT,
+  RIGHT,
+  NEXT_BUTTON_ID,
+  PREVIOUS_BUTTON_ID,
+  ARROW_LEFT,
+  ARROW_RIGHT,
+} from '../../../utils/constants.utils';
 import { getMonthPickerState } from '../../../utils/functions.utils';
 import { MonthPickerInputState } from '../../../utils/types.utils';
 import ArrowButton from '../../buttons/arrow-button/arrow-button.component';
@@ -21,8 +28,6 @@ const STEP_INCREMENT = 1;
 const STEP_DECREMENT = -1;
 const KEYDOWN = 'keydown';
 const KEYUP = 'keyup';
-const PREVIOUS_BUTTON_ID = 'previous-month';
-const NEXT_BUTTON_ID = 'next-month';
 
 const MonthPickerInput = ({
   label,
@@ -42,9 +47,9 @@ const MonthPickerInput = ({
   const handleKeyDown = (event: KeyboardEvent) => {
     const target = event.target as HTMLButtonElement;
     if (target.id === NEXT_BUTTON_ID || target.id === PREVIOUS_BUTTON_ID) {
-      if (event.key === 'ArrowRight') {
+      if (event.key === ARROW_RIGHT) {
         handleChange(STEP_INCREMENT);
-      } else if (event.key === 'ArrowLeft' && step !== FIRST_STEP) {
+      } else if (event.key === ARROW_LEFT && step !== FIRST_STEP) {
         handleChange(STEP_DECREMENT);
       }
     }

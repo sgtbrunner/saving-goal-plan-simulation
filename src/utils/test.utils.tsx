@@ -14,6 +14,7 @@ export const BANNER = 'banner';
 export const BUTTON = 'button';
 export const IMG = 'img';
 export const TEST = 'test';
+export const AMOUNT = 'amount';
 
 // TEST ID CONSTANTS
 export const CARD = 'card';
@@ -21,6 +22,7 @@ export const MAIN_COMPONENT = 'main-component';
 export const MAIN_TITLE = 'main-title';
 export const MONTHLY_AMOUNT = 'monthly-amount';
 export const SUMMARY_TEXT = 'summary-text';
+export const CURRENCY_INPUT = 'currency-input';
 
 // FUNCTIONS
 export const getDefaultSavingGoal = (): SavingGoalState => {

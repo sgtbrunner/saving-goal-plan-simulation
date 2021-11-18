@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyInput component should match snapshot 1`] = `
+<div>
+  <div>
+    <label
+      class="sc-bdnxRM eJleSl"
+      for="amount"
+    >
+      Total
+    </label>
+    <div
+      class="sc-gtsrHT eNnCka"
+    >
+      <div
+        class="sc-dlnjwi hndFJ"
+      >
+        <span>
+          $
+        </span>
+      </div>
+      <input
+        class="sc-hKFxyN kxEKCq"
+        data-testid="currency-input"
+        id="amount"
+        inputmode="decimal"
+        name="amount"
+        type="text"
+        value="25,000"
+      />
+    </div>
+  </div>
+</div>
+`;

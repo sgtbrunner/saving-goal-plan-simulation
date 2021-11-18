@@ -58,7 +58,7 @@ describe('MonthPickerInput component', () => {
     expect(year).toBeInTheDocument();
   });
 
-  describe('user interaction tests', () => {
+  describe('user interaction events', () => {
     let previousButton: HTMLElement;
     let nextButton: HTMLElement;
 
@@ -69,9 +69,11 @@ describe('MonthPickerInput component', () => {
       mountComponent();
 
       previousButton = screen.getAllByRole(BUTTON)[0];
+      expect(previousButton).toBeInTheDocument();
       expect(previousButton).toHaveProperty(ID, PREVIOUS_BUTTON_ID);
 
       nextButton = screen.getAllByRole(BUTTON)[1];
+      expect(nextButton).toBeInTheDocument();
       expect(nextButton).toHaveProperty(ID, NEXT_BUTTON_ID);
     });
 
@@ -124,13 +126,13 @@ describe('MonthPickerInput component', () => {
     it('should call for update date when pressing arrow buttons on keyboard', () => {
       nextButton.focus();
       // PRESS ARROW RIGHT KEYBOARD BUTTON
-      fireEvent.keyDown(document, { key: ARROW_RIGHT, code: ARROW_RIGHT });
+      fireEvent.keyDown(nextButton, { key: ARROW_RIGHT, code: ARROW_RIGHT });
       waitFor(() => {
         expect(defaultProps.updateReachDate).toHaveBeenCalledTimes(1);
       });
 
       // PRESS ARROW RIGHT KEYBOARD BUTTON
-      fireEvent.keyDown(document, { key: ARROW_LEFT, code: ARROW_LEFT });
+      fireEvent.keyDown(nextButton, { key: ARROW_LEFT, code: ARROW_LEFT });
       waitFor(() => {
         expect(defaultProps.updateReachDate).toHaveBeenCalledTimes(1);
       });
@@ -138,10 +140,10 @@ describe('MonthPickerInput component', () => {
 
     it('should NOT call for update date when any different key is pressed down', () => {
       nextButton.focus();
-      fireEvent.keyDown(document, { key: ARROW_UP, code: ARROW_UP });
+      fireEvent.keyDown(nextButton, { key: ARROW_UP, code: ARROW_UP });
       expect(defaultProps.updateReachDate).not.toHaveBeenCalled();
 
-      fireEvent.keyDown(document, { key: ARROW_DOWN, code: ARROW_DOWN });
+      fireEvent.keyDown(nextButton, { key: ARROW_DOWN, code: ARROW_DOWN });
       expect(defaultProps.updateReachDate).not.toHaveBeenCalled();
     });
   });

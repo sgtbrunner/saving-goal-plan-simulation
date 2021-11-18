@@ -1,6 +1,6 @@
 import { screen, render, RenderResult } from '@testing-library/react';
 
-import { BUTTON } from '../../../../utils/constants.utils';
+import { BUTTON } from '../../../../utils/test.utils';
 import CustomButton from '../custom-button.component';
 import { ButtonProps } from '../custom-button.types';
 

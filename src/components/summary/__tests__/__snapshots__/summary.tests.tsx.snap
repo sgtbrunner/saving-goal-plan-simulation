@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Summary component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-dlnjwi gsoFCl"
+  >
+    <div
+      class="sc-hKFxyN iCJaxk"
+      data-testid="monthly-amount"
+    >
+      <h4>
+        Monthly amount
+      </h4>
+      <p>
+        $1,040
+      </p>
+    </div>
+    <div
+      class="sc-eCApnc hVfgZM"
+      data-testid="summary-text"
+    >
+      <p>
+        You’re planning 
+        <strong>
+          15 monthly deposits
+        </strong>
+         
+        to reach your
+         
+        <strong>
+          $15,600
+        </strong>
+         goal by
+         
+        <strong>
+          February
+           
+          2023
+        </strong>
+        .
+      </p>
+    </div>
+  </div>
+</div>
+`;

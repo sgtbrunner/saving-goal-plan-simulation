@@ -1,14 +1,14 @@
 import { FIRST_STEP, LOCALE } from './constants.utils';
 import { MonthPickerInputState } from './types.utils';
 
-const getDate = (customDate?: string | number): Date =>
+export const getDate = (customDate?: string | number): Date =>
   customDate ? new Date(customDate) : new Date();
 
-const monthFormatter = new Intl.DateTimeFormat(LOCALE, {
+export const monthFormatter = new Intl.DateTimeFormat(LOCALE, {
   month: 'long',
 });
 
-const yearFormatter = new Intl.DateTimeFormat(LOCALE, {
+export const yearFormatter = new Intl.DateTimeFormat(LOCALE, {
   year: 'numeric',
 });
 

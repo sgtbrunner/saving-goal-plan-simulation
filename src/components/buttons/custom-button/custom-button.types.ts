@@ -1,4 +1,5 @@
-import { BUTTON, WHITE } from '../../../utils/constants.utils';
+import { WHITE } from '../../../utils/constants.utils';
+import { BUTTON } from '../../../utils/test.utils';
 
 export type CustomButtonStyles = {
   color: string;

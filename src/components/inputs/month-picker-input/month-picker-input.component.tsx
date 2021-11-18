@@ -49,7 +49,7 @@ const MonthPickerInput = ({
       }
     }
 
-    document.removeEventListener('keydown', handleKeyDown);
+    document.removeEventListener(KEYDOWN, handleKeyDown);
   };
 
   const handleKeyUp = () => {

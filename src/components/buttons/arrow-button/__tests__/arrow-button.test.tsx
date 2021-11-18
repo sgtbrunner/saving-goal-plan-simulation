@@ -1,14 +1,8 @@
 import { screen, render, RenderResult, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import {
-  ALT,
-  BUTTON,
-  ID,
-  IMG,
-  LEFT,
-  TEST,
-} from '../../../../utils/constants.utils';
+import { ID, LEFT } from '../../../../utils/constants.utils';
+import { ALT, BUTTON, IMG, TEST } from '../../../../utils/test.utils';
 import { ArrowButtonProps } from '../arrow-button.types';
 import ArrowButton from '../arrow-button.component';
 
@@ -60,7 +54,7 @@ describe('ArrowButton component', () => {
 
     const arrowButton = screen.getByRole(BUTTON);
     userEvent.click(arrowButton);
-    expect(defaultProps.onClick).toHaveBeenCalled();
+    expect(defaultProps.onClick).toHaveBeenCalledTimes(1);
   });
 
   it('should NOT call onClick function if button IS disabled', () => {

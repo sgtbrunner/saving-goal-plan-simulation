@@ -3,7 +3,7 @@ export type CurrencyInputProps = {
   name?: string;
   symbol?: string;
   initialValue?: string | number;
-  updateAmount: DispatchUpdateAmountAction;
+  updateAmount: DispatchUpdateAmountActionType;
 };
 
-export type DispatchUpdateAmountAction = (amount: number) => void;
+export type DispatchUpdateAmountActionType = (amount: number) => void;

@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 
 import { updateAmount } from '../../../redux/saving-goal/saving-goal.actions';
 import { Dispatch } from '../../../redux/saving-goal/saving-goal.types';
-import { INITIAL_GOAL_AMOUNT } from '../../../utils/constants.utils';
+import {
+  INITIAL_GOAL_AMOUNT,
+  DOLLAR_SIGN,
+} from '../../../utils/constants.utils';
 import { getSignificantAndFractionalDigits } from '../../../utils/functions.utils';
 import { CurrencyInputProps } from './currency-input.types';
 import { InputLabel, InputContainer } from '../../../styles/global.styles';
@@ -32,7 +35,7 @@ const convertInputToNumber = (value: string): number => {
 const CurrencyInput = ({
   label,
   name = 'amount',
-  symbol = '$',
+  symbol = DOLLAR_SIGN,
   initialValue = INITIAL_GOAL_AMOUNT,
   updateAmount,
 }: CurrencyInputProps): JSX.Element => {
@@ -56,6 +59,7 @@ const CurrencyInput = ({
         </IconContainer>
         <Input
           id={name}
+          data-testid="currency-input"
           name={name}
           allowNegativeValue={false}
           decimalSeparator="."

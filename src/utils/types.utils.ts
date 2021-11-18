@@ -4,7 +4,7 @@ export type MonthPickerInputState = {
   month: string;
 };
 
-export type SavingGoalStoreProps = {
+export type SavingGoalState = {
   goalAmount: number;
   reachDateMonth: string;
   reachDateYear: string;
@@ -13,5 +13,5 @@ export type SavingGoalStoreProps = {
 };
 
 export type StoreState = {
-  savingGoal: SavingGoalStoreProps;
+  savingGoal: SavingGoalState;
 };

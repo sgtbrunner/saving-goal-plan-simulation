@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div>
+  <header
+    class="sc-dlnjwi KHDXg"
+  >
+    <img
+      alt="Origin"
+      class="sc-hKFxyN xorWA"
+      src="origin-logo.svg"
+    />
+  </header>
+  <main
+    class="sc-eCApnc genBIu"
+    data-testid="main-component"
+  >
+    <p
+      class="sc-jSFjdj cTHnav"
+      data-testid="main-title"
+    >
+      Let's plan your 
+      <strong>
+        saving goal
+      </strong>
+      .
+    </p>
+    <div
+      class="sc-gKAaRy jeixpg"
+      data-testid="card"
+    >
+      <div
+        class="sc-iCoGMd iEdEeR"
+      >
+        <img
+          alt="Buy a house"
+          src="buy-a-house.svg"
+        />
+        <div>
+          <h1>
+            Buy a house
+          </h1>
+          <p>
+            Saving goal
+          </p>
+        </div>
+      </div>
+      <form
+        class="sc-fujyAs bBDXrN"
+      >
+        <div>
+          <label
+            class="sc-bdnxRM eJleSl"
+            for="amount"
+          >
+            Total amount
+          </label>
+          <div
+            class="sc-gtsrHT eNnCka"
+          >
+            <div
+              class="sc-jrsJWt dsezbR"
+            >
+              <span>
+                $
+              </span>
+            </div>
+            <input
+              class="sc-kEqXSa eYdNVd"
+              data-testid="currency-input"
+              id="amount"
+              inputmode="decimal"
+              name="amount"
+              type="text"
+              value="25,000"
+            />
+          </div>
+        </div>
+        <div>
+          <label
+            class="sc-bdnxRM eJleSl"
+            for="reachDate"
+          >
+            Reach goal by
+          </label>
+          <div
+            class="sc-gtsrHT sc-crzoAE eNnCka cgYawG"
+          >
+            <button
+              class="sc-iqAclL eBngBj"
+              disabled=""
+              id="previous-month"
+              type="button"
+            >
+              <img
+                alt="arrow-left"
+                src="arrow-left.svg"
+              />
+            </button>
+            <div
+              class="sc-dIsUp KZXcm"
+            >
+              <p
+                class="sc-bqGGPW ffcLqT"
+              >
+                December
+              </p>
+              <p
+                class="sc-ksluID eyeAHn"
+              >
+                2021
+              </p>
+            </div>
+            <button
+              class="sc-iqAclL eBngBj"
+              id="next-month"
+              type="button"
+            >
+              <img
+                alt="arrow-right"
+                src="arrow-right.svg"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+      <div
+        class="sc-hBMUJo xYbuU"
+      >
+        <div
+          class="sc-fnVZcZ jRganD"
+          data-testid="monthly-amount"
+        >
+          <h4>
+            Monthly amount
+          </h4>
+          <p>
+            $25,000
+          </p>
+        </div>
+        <div
+          class="sc-fFSPTT cHpNsJ"
+          data-testid="summary-text"
+        >
+          <p>
+            You’re planning 
+            <strong>
+              1 monthly deposits
+            </strong>
+             
+            to reach your
+             
+            <strong>
+              $25,000
+            </strong>
+             goal by
+             
+            <strong>
+              December
+               
+              2021
+            </strong>
+            .
+          </p>
+        </div>
+      </div>
+      <button
+        class="sc-pNWdM frkYWM"
+        color="primary"
+        type="submit"
+      >
+        Confirm
+      </button>
+    </div>
+  </main>
+</div>
+`;

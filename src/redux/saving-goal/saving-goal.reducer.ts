@@ -1,13 +1,13 @@
 import { getMonthPickerState } from '../../utils/functions.utils';
 import { INITIAL_GOAL_AMOUNT } from '../../utils/constants.utils';
 import {
-  SavingGoalStoreProps,
+  SavingGoalState,
   MonthPickerInputState,
 } from '../../utils/types.utils';
 import { savingGoalTypes, SavingGoalActions } from './saving-goal.types';
 import { calculateMonthlyAmount } from './saving-goal.utils';
 
-const getSavingGoalInitialState = (): SavingGoalStoreProps => {
+const getSavingGoalInitialState = (): SavingGoalState => {
   const {
     step: monthlyDeposits,
     month: reachDateMonth,
@@ -25,7 +25,7 @@ const getSavingGoalInitialState = (): SavingGoalStoreProps => {
 const savingGoalReducer = (
   state = getSavingGoalInitialState(),
   action: SavingGoalActions
-): SavingGoalStoreProps => {
+): SavingGoalState => {
   let payload;
   switch (action.type) {
     case savingGoalTypes.UPDATE_AMOUNT:

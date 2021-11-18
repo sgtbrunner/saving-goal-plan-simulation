@@ -1,6 +1,7 @@
 import { screen, render, RenderResult, within } from '@testing-library/react';
 
-import { ALT, BANNER, IMG, ORIGIN } from '../../../../utils/constants.utils';
+import { ORIGIN } from '../../../../utils/constants.utils';
+import { ALT, BANNER, IMG } from '../../../../utils/test.utils';
 import Header from '../header.component';
 
 const mountComponent = (): RenderResult => render(<Header />);

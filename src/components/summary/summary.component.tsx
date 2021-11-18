@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 
+import { MONTHLY_AMOUNT, SUMMARY_TEXT } from '../../utils/test.utils';
 import { getSignificantAndFractionalDigits } from '../../utils/functions.utils';
-import { SavingGoalStoreProps, StoreState } from '../../utils/types.utils';
+import { SavingGoalState, StoreState } from '../../utils/types.utils';
 import { FormatCurrencyType } from './summary.types';
 import {
   SummaryContainer,
@@ -16,7 +17,7 @@ const USDCurrencyFormatter = (digits: number): Intl.NumberFormat =>
     maximumFractionDigits: digits,
   });
 
-const formatUSDCurrency = ({
+export const formatUSDCurrency = ({
   value,
   digits = 2,
 }: FormatCurrencyType): string => {
@@ -32,13 +33,13 @@ const Summary = ({
   reachDateYear,
   monthlyAmount,
   monthlyDeposits,
-}: SavingGoalStoreProps): JSX.Element => (
+}: SavingGoalState): JSX.Element => (
   <SummaryContainer>
-    <MonthlyAmountContainer>
+    <MonthlyAmountContainer data-testid={MONTHLY_AMOUNT}>
       <h4>Monthly amount</h4>
       <p>{formatUSDCurrency({ value: monthlyAmount })}</p>
     </MonthlyAmountContainer>
-    <SummaryTextContainer>
+    <SummaryTextContainer data-testid={SUMMARY_TEXT}>
       <p>
         You’re planning <strong>{`${monthlyDeposits} monthly deposits`}</strong>{' '}
         to reach your{' '}

@@ -13,7 +13,7 @@ exports[`Summary component should match snapshot 1`] = `
         Monthly amount
       </h4>
       <p>
-        $1,040
+        $25,000
       </p>
     </div>
     <div
@@ -23,20 +23,20 @@ exports[`Summary component should match snapshot 1`] = `
       <p>
         You’re planning 
         <strong>
-          15 monthly deposits
+          1 monthly deposits
         </strong>
          
         to reach your
          
         <strong>
-          $15,600
+          $25,000
         </strong>
          goal by
          
         <strong>
-          February
+          December
            
-          2023
+          2021
         </strong>
         .
       </p>

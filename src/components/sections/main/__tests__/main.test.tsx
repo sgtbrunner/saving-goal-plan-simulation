@@ -1,23 +1,13 @@
-import { screen, render, RenderResult } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import configureMockStore from 'redux-mock-store';
+import { screen, RenderResult } from '@testing-library/react';
 
 import {
   CARD,
   MAIN_TITLE,
-  getDefaultSavingGoal,
+  renderWithRedux,
 } from '../../../../utils/test.utils';
 import Main from '../main.component';
 
-const mockStore = configureMockStore();
-const store = mockStore({ savingGoal: getDefaultSavingGoal() });
-
-const mountComponent = (): RenderResult =>
-  render(
-    <Provider store={store}>
-      <Main />
-    </Provider>
-  );
+const mountComponent = (): RenderResult => renderWithRedux(<Main />);
 
 describe('Main component', () => {
   it('should match snapshot', () => {
